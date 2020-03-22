@@ -9,7 +9,7 @@ Projet pour déployer des Change Set avec Visual Studio Code
 * [Visual Studio Code](https://code.visualstudio.com)
 * [Salesforce Extension Pack](https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode)
 
-### Configuration
+### Installation
 
 #### 1️⃣ Installer le Salesforce CLI
 
@@ -29,6 +29,19 @@ Télécharger et installer [Visual Studio Code](https://code.visualstudio.com)
 
 Dans Visual Studio Code cliquer sur l'icône extension et chercher "Salesforce Extension Pack" pour l'installer
 
+### Configuration 
+
+#### 1️⃣ Télécharger ce projet 
+
+Télécherger [ce projet github](https://github.com/eFrontForce/changeset-deploy) sur votre PC et ouvrez le sur Visual Studio Code
+
+#### 2️⃣ Authoriser les orgs
+
+Utiliser Visual Studio Code pour authoriser les orgs que vous allez utiliser pour les déploiements
+
+#### 3️⃣ Configurer le tasks.json
+
+Configurer les orgs source et destination 
 
 ### Utilisation 
 
