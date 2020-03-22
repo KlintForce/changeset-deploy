@@ -33,7 +33,7 @@ Dans Visual Studio Code cliquer sur l'icône extension et chercher "Salesforce E
 
 #### 1️⃣ Télécharger ce projet 
 
-Télécherger [ce projet github](https://github.com/eFrontForce/changeset-deploy) sur votre PC et ouvrez le sur Visual Studio Code
+Télécharger [ce projet github](https://github.com/eFrontForce/changeset-deploy) sur votre PC et ouvrez le sur Visual Studio Code
 
 #### 2️⃣ Authoriser les orgs
 
