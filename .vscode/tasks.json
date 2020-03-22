@@ -1,0 +1,42 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Change Set 🔁 deploy 🚀",
+      "type": "shell",
+      "command": "sfdx efrontforce:changeset:deploy -n '${input:changeSetName}' -s ${input:sourceOrg} -t ${input:targetOrg} ",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "sourceOrg",
+      "description": "Merci de choisir l'org ☁️ source ⬇️",
+      // Designez votre org destination à utiliser par defaut
+      "default": "",
+      // Ajoutez vos org source ici exemple ["DEV","UAT"]
+      "options": [],
+      "type": "pickString"
+    },
+    {
+      "id": "targetOrg",
+      "description": "Merci de choisir l'org ☁️ destination ⬆️",
+      // Designez votre org destination à utiliser par defaut
+      "default": "",
+      // Ajoutez vos org destination ici exemple ["PREPROD","PROD"]
+      "options": [],
+      "type": "pickString"
+    },
+    {
+      "id": "changeSetName",
+      "description": "Merci de saisir le nom de votre change set 🔁",
+      "type": "promptString"
+    }
+  ]
+}
