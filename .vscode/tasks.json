@@ -6,7 +6,7 @@
     {
       "label": "Change Set 🔁 deploy 🚀",
       "type": "shell",
-      "command": "sfdx efrontforce:changeset:deploy -n '${input:changeSetName}' -s ${input:sourceOrg} -t ${input:targetOrg} ",
+      "command": "sfdx efrontforce:changeset:deploy -n '${input:changeSetName}' -s ${input:sourceOrg} -t ${input:targetOrg} ${input:IsValidation}",
       "group": {
         "kind": "build",
         "isDefault": true
@@ -15,6 +15,11 @@
     }
   ],
   "inputs": [
+    {
+      "id": "changeSetName",
+      "description": "Merci de saisir le nom de votre change set 🔁",
+      "type": "promptString"
+    },
     {
       "id": "sourceOrg",
       "description": "Merci de choisir l'org ☁️ source ⬇️",
@@ -34,9 +39,20 @@
       "type": "pickString"
     },
     {
-      "id": "changeSetName",
-      "description": "Merci de saisir le nom de votre change set 🔁",
-      "type": "promptString"
+      "id": "IsValidation",
+      "description": "Mode validation activé ✔️",
+      "default": "Oui",
+      "options": [
+        {
+          "label": "Oui",
+          "value": "-c"
+        },
+        {
+          "label": "Non",
+          "value": ""
+        }
+      ],
+      "type": "pickString"
     }
   ]
 }
